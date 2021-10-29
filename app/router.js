@@ -11,7 +11,8 @@ Router.map(function () {
   this.route('services');
   this.route('contact');
 
-  this.resource('posts', {path: '/posts'}, function() {
+  this.route('posts', function () {
     this.route('new');
+    this.route('post', { path: '/:post_id' });
   });
 });
