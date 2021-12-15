@@ -15,4 +15,9 @@ Router.map(function () {
     this.route('new');
     this.route('post', { path: '/:post_id' });
   });
+  this.route('events');
+  this.route('cars', function () {
+    this.route('new');
+    this.route('edit', { path: '/edit/:car_id' });
+  });
 });

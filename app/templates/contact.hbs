@@ -1,1 +1,34 @@
-<h1>Conatact</h1>
+<h1 {{action 'toggleBody'}}>{{this.title}}</h1>
+<button type="button" {{action 'sayHello'}}>Say Hello</button>
+{{#if this.isShowingBody}}
+  <p>{{body}}</p>
+{{/if}}
+<p>
+  Created {{formatDate this.created}}
+</p>
+<p>
+  <strong>Authors </strong>
+  {{#each this.authors as |author|}}
+    {{author}}
+  {{/each}}
+</p>
+<h4>Comments</h4>
+<ul>
+  {{#each this.comments as |comment|}}
+    <li>
+      <strong>{{comment.name}}</strong> - {{comment.note}}
+    </li>
+  {{/each}}
+</ul>
+
+<hr>
+<h4>Add Comment</h4>
+<form {{action 'submitAction' on='submit'}}>
+  <p>
+    Name: {{input value=name}}
+  </p>
+  <p>
+    Comment: {{input value=note}}
+  </p>
+  <button type="submit">Submit</button>
+</form>

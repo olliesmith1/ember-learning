@@ -1,12 +1,30 @@
 {{page-title "Ollies App"}}
 
-<h2 id="title">Welcome to my App</h2>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" aria-current="page" href="/">Ollies App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<ul>
-  <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-  <li>{{#link-to 'about'}}About{{/link-to}}</li>
-  <li>{{#link-to 'services'}}Services{{/link-to}}</li>
-  <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
-</ul>
-
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>

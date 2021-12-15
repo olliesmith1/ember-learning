@@ -1,0 +1,12 @@
+{{page-title "Cars"}}
+{{#link-to 'cars.new'}}Create Car{{/link-to}}
+<hr>
+{{outlet}}
+<h1>Cars</h1>
+<ul>
+  {{#each this.model as |car|}}
+    <li>{{car.year}} {{car.make}} {{car.model}} - {{#link-to 'cars.edit' car.id }}Edit{{/link-to}}
+      <button {{action 'deleteCar' car.id}}>Delete</button>
+    </li>
+  {{/each}}
+</ul>
